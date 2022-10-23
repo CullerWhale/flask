@@ -14,7 +14,7 @@ def index():
 
 #Using the below, the popup message appears when the button is clicked on the webpage.
 #0x00001000 - This makes the popup appear over the browser window
-@app.route('/flask/test')
+@app.route('/')
 def test():
     win32api.MessageBox(0, 'You have just run a python script on the button press!', 'Running a Python Script via Javascript', 0x00001000)
     print('on click')
