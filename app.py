@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     win32api.MessageBox(0, 'You have just run a python script on the page load!', 'Running a Python Script via Javascript', 0x00001000)
+    print('on load')
     return render_template('index.html')
 
 #Using the below, the popup message appears when the button is clicked on the webpage.
@@ -16,6 +17,7 @@ def index():
 @app.route('/flask/test')
 def test():
     win32api.MessageBox(0, 'You have just run a python script on the button press!', 'Running a Python Script via Javascript', 0x00001000)
+    print('on click')
     return render_template('index.html')
 
 if __name__ == "__main__":
